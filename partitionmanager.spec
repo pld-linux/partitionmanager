@@ -12,6 +12,7 @@ URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	cmake >= 2.4.8
 BuildRequires:	kde4-kdebase-devel >= 4.1.0
 BuildRequires:	libuuid-devel
+BuildRequires:	parted-devel
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
