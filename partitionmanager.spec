@@ -8,7 +8,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}-%{state}.tar.bz2
 # Source0-md5:	621c52c4c12333515066706d21596e19
-URL:		http://
+URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	cmake >= 2.4.8
 BuildRequires:	kde4-kdebase-devel >= 4.1.0
 BuildRequires:	libuuid-devel
