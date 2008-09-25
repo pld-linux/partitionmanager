@@ -1,4 +1,4 @@
-%define		state		ALPHA1
+%define		state		ALPHA2
 
 Summary:	KDE Partition Manager
 Name:		partitionmanager
@@ -7,7 +7,7 @@ Release:	0.%{state}.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}-%{state}.tar.bz2
-# Source0-md5:	621c52c4c12333515066706d21596e19
+# Source0-md5:	76fa6b430f7f0cef406af1d3ceffb7a5
 URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	cmake >= 2.4.8
 BuildRequires:	kde4-kdebase-devel >= 4.1.0
@@ -57,3 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/partitionmanager
 %dir %{_datadir}/apps/partitionmanager
 %{_datadir}/apps/partitionmanager/partitionmanagerui.rc
+%{_desktopdir}/kde4/partitionmanager.desktop
