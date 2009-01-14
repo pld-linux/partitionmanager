@@ -14,6 +14,7 @@ BuildRequires:	kde4-kdebase-devel >= 4.1.0
 BuildRequires:	libuuid-devel
 BuildRequires:	parted-devel
 BuildRequires:	rpmbuild(macros) >= 1.293
+Requires:	kde-common-dirs >= 0.2-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _kde_prefix     %{_prefix}
@@ -58,3 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/apps/partitionmanager
 %{_datadir}/apps/partitionmanager/partitionmanagerui.rc
 %{_desktopdir}/kde4/partitionmanager.desktop
+%attr(755,root,root) %{_libdir}/libpartitionmanagerprivate.so
