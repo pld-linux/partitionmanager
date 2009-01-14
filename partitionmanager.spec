@@ -1,4 +1,6 @@
 %define		state		BETA1
+%define		kdever		4.1.96
+%define		qtver		4.4.3
 
 Summary:	KDE Partition Manager
 Name:		partitionmanager
@@ -9,12 +11,13 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}-%{state}.tar.bz2
 # Source0-md5:	6a6a9366018151f0b963109cae2630d4
 URL:		http://sourceforge.net/projects/partitionman/
-BuildRequires:	cmake >= 2.4.8
-BuildRequires:	kde4-kdebase-devel >= 4.1.0
+BuildRequires:	QtCore-devel >= %{qtver}
+BuildRequires:	QtGui-devel >= %{qtver}
+BuildRequires:	cmake >= 2.6.2
+BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	libuuid-devel
 BuildRequires:	parted-devel
 BuildRequires:	rpmbuild(macros) >= 1.293
-Requires:	kde-common-dirs >= 0.2-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _kde_prefix     %{_prefix}
@@ -56,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/partitionmanager
+%attr(755,root,root) %{_libdir}/libpartitionmanagerprivate.so
 %dir %{_datadir}/apps/partitionmanager
 %{_datadir}/apps/partitionmanager/partitionmanagerui.rc
 %{_desktopdir}/kde4/partitionmanager.desktop
-%attr(755,root,root) %{_libdir}/libpartitionmanagerprivate.so
