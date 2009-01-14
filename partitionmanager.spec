@@ -20,12 +20,6 @@ BuildRequires:	parted-devel
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _kde_prefix     %{_prefix}
-%define         _kde_libdir     %{_libdir}
-%define         _kde_share_dir  %{_datadir}
-%define         _kde_html_dir   %{_kdedocdir}
-%define         _kde_config_dir %{_datadir}/config
-
 %description
 Easily manage disks, partitions and file systems on your KDE Desktop:
 Create, resize, move, copy, back up, restore or delete partitions.
@@ -37,7 +31,7 @@ Create, resize, move, copy, back up, restore or delete partitions.
 install -d build
 cd build
 %cmake \
-	-DCMAKE_INSTALL_PREFIX=%{_kde_prefix} \
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64 \
 %endif
