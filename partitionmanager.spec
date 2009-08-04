@@ -1,6 +1,6 @@
-%define		state		BETA3
-%define		kdever		4.2.4
-%define		qtver		4.4.5
+%define		state		RC1
+%define		kdever		4.3.0
+%define		qtver		4.5.2
 
 Summary:	KDE Partition Manager
 Name:		partitionmanager
@@ -9,7 +9,7 @@ Release:	0.%{state}.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}-%{state}.tar.bz2
-# Source0-md5:	5a2ed50289f8f8e9e77f1302ecce7080
+# Source0-md5:	12320c3ec60dcb47b94bfbc655270739
 URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
