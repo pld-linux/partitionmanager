@@ -1,15 +1,14 @@
-%define		state		RC1
 %define		kdever		4.3.0
 %define		qtver		4.5.2
 
 Summary:	KDE Partition Manager
 Name:		partitionmanager
 Version:	1.0.0
-Release:	0.%{state}.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}-%{state}.tar.bz2
-# Source0-md5:	12320c3ec60dcb47b94bfbc655270739
+Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}.tar.bz2
+# Source0-md5:	07046e0c61ca3f06129580ffd7f9c66e
 URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
@@ -25,7 +24,7 @@ Easily manage disks, partitions and file systems on your KDE Desktop:
 Create, resize, move, copy, back up, restore or delete partitions.
 
 %prep
-%setup -q -n %{name}-%{version}-%{state}
+%setup -q
 
 %build
 install -d build
