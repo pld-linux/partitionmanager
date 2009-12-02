@@ -12,10 +12,18 @@ Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}.tar.bz2
 URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
+BuildRequires:	QtNetwork-devel
+BuildRequires:	QtSvg-devel
+BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.6.2
+BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
+BuildRequires:	libblkid-devel
 BuildRequires:	libuuid-devel
 BuildRequires:	parted-devel
+BuildRequires:	pkgconfig
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
