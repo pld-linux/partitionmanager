@@ -1,29 +1,29 @@
-%define		kdever		4.3.0
-%define		qtver		4.5.2
+%define		kdever		4.4.3
+%define		qtver		4.6.2
 
 Summary:	KDE Partition Manager
 Name:		partitionmanager
-Version:	1.0.0
-Release:	2
+Version:	1.0.2
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}.tar.bz2
-# Source0-md5:	07046e0c61ca3f06129580ffd7f9c66e
+# Source0-md5:	903a5d5abd345d9c3b5e911b4c6abe48
 URL:		http://sourceforge.net/projects/partitionman/
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
-BuildRequires:	QtNetwork-devel
-BuildRequires:	QtSvg-devel
+BuildRequires:	QtNetwork-devel >= %{qtver}
+BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	automoc4
-BuildRequires:	cmake >= 2.6.2
+BuildRequires:	cmake >= 2.8.0
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	libblkid-devel
 BuildRequires:	libuuid-devel
 BuildRequires:	parted-devel
 BuildRequires:	pkgconfig
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	qt4-build >= %{qtver}
+BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,9 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/partitionmanager
 %attr(755,root,root) %{_bindir}/partitionmanager-bin
 %attr(755,root,root) %{_libdir}/libpartitionmanagerprivate.so
-%attr(755,root,root) %{_libdir}/kde4/kcm_partitionmanager.so
+#%attr(755,root,root) %{_libdir}/kde4/kcm_partitionmanager.so
 %dir %{_datadir}/apps/partitionmanager
 %{_datadir}/apps/partitionmanager/partitionmanagerui.rc
 %{_desktopdir}/kde4/partitionmanager.desktop
-%{_datadir}/kde4/services/kcm_partitionmanager.desktop
+#%{_datadir}/kde4/services/kcm_partitionmanager.desktop
 %{_iconsdir}/hicolor/*x*/apps/partitionmanager.png
