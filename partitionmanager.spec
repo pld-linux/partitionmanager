@@ -9,7 +9,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}.tar.bz2
 # Source0-md5:	903a5d5abd345d9c3b5e911b4c6abe48
-URL:		http://sourceforge.net/projects/partitionman/
+URL:		http://partitionman.sourceforge.net/
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtGui-devel >= %{qtver}
 BuildRequires:	QtNetwork-devel >= %{qtver}
