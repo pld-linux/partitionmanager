@@ -39,6 +39,8 @@ install -d build
 cd build
 %cmake \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-DPARTMAN_KCM=ON \
+	-DPARTMAN_KPART=ON \
 %if "%{_lib}" == "lib64"
 	-DLIB_SUFFIX=64 \
 %endif
@@ -62,9 +64,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/partitionmanager
 %attr(755,root,root) %{_bindir}/partitionmanager-bin
 %attr(755,root,root) %{_libdir}/libpartitionmanagerprivate.so
-#%attr(755,root,root) %{_libdir}/kde4/kcm_partitionmanager.so
+%attr(755,root,root) %{_libdir}/kde4/kcm_partitionmanager.so
+%attr(755,root,root) %{_libdir}/kde4/partitionmanagerpart.so
 %dir %{_datadir}/apps/partitionmanager
 %{_datadir}/apps/partitionmanager/partitionmanagerui.rc
+%dir %{_datadir}/apps/partitionmanagerpart
+%{_datadir}/apps/partitionmanagerpart/partitionmanagerpart.rc
 %{_desktopdir}/kde4/partitionmanager.desktop
-#%{_datadir}/kde4/services/kcm_partitionmanager.desktop
+%{_datadir}/kde4/services/kcm_partitionmanager.desktop
+%{_datadir}/kde4/services/partitionmanagerpart.desktop
 %{_iconsdir}/hicolor/*x*/apps/partitionmanager.png
