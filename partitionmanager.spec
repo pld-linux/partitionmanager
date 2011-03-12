@@ -4,7 +4,7 @@
 Summary:	KDE Partition Manager
 Name:		partitionmanager
 Version:	1.0.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/partitionman/%{name}-%{version}.tar.bz2
