@@ -16,7 +16,7 @@ BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	automoc4
 BuildRequires:	cmake >= 2.8.0
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	libblkid-devel
 BuildRequires:	libuuid-devel
